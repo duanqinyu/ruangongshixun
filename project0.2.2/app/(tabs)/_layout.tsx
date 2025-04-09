@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import { StyleSheet } from 'react-native';
-import { Chrome as Home, Camera, ChartBar as BarChart3, User } from 'lucide-react-native';
+import { Chrome as Home, Camera, ShoppingBag, User } from 'lucide-react-native';
 
 export default function TabLayout() {
   return (
@@ -31,11 +31,11 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="nutrition"
+        name="shop"
         options={{
-          title: '营养',
+          title: '商城',
           tabBarIcon: ({ color, size }) => (
-            <BarChart3 size={size} color={color} />
+            <ShoppingBag size={size} color={color} />
           ),
         }}
       />
@@ -56,12 +56,12 @@ const styles = StyleSheet.create({
   tabBar: {
     backgroundColor: '#FFFFFF',
     borderTopWidth: 1,
-    borderTopColor: '#E5E5E5',
-    height: 60,
-    paddingBottom: 5,
+    borderTopColor: '#E5E5EA',
+    paddingBottom: 0,
+    height: 49,
   },
   tabBarLabel: {
-    fontFamily: 'Inter-Medium',
-    fontSize: 12,
+    fontSize: 10,
+    lineHeight: 14,
   },
 });
